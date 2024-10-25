@@ -1,31 +1,34 @@
-import { useState } from "react"
-import { Link } from 'react-router-dom'
-import logo from "../assets/mavelas-logo-removebg-preview.png"
+import { useState } from "react";
+import { Link } from 'react-router-dom';
+import logo from "../assets/mavelas-logo-removebg-preview.png";
 
 function Navbar() {
-
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-primary shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
-            <Link to="/">
-                <img src={logo} alt="Logo" className="h-20 w-auto" />
-            </Link>
+          <Link to="/">
+            <img src={logo} alt="Logo" className="h-20 w-auto" />
+          </Link>
         </div>
 
         {/* Links for desktop */}
         <div className="space-x-8 hidden md:flex">
-            <Link to="/" className="text-gray-800 hover:text-secondary">Home</Link>
-            <Link to="/tienda" className="text-gray-800 hover:text-secondary">Tienda</Link>
-            <Link to="/quienes-somos" className="text-gray-800 hover:text-secondary">Quiénes Somos</Link>
-            <Link to="/contacto" className="text-gray-800 hover:text-secondary">Contacto</Link>
+          <Link to="/" className="text-gray-800 hover:text-secondary">Home</Link>
+          <Link to="/tienda" className="text-gray-800 hover:text-secondary">Tienda</Link>
+          <Link to="/quienes-somos" className="text-gray-800 hover:text-secondary">Quiénes Somos</Link>
+          <Link to="/contacto" className="text-gray-800 hover:text-secondary">Contacto</Link>
         </div>
 
         {/* Mobile menu button */}
@@ -42,15 +45,15 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-4 pb-4 space-y-4">
-          <Link to="/" className="block text-gray-800 hover:text-secondary">Home</Link>
-      <Link to="/tienda" className="block text-gray-800 hover:text-secondary">Tienda</Link>
-      <Link to="/quienes-somos" className="block text-gray-800 hover:text-secondary">Quiénes Somos</Link>
-      <Link to="/contacto" className="block text-gray-800 hover:text-secondary">Contacto</Link>
+            <Link to="/" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Home</Link>
+            <Link to="/tienda" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Tienda</Link>
+            <Link to="/quienes-somos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Quiénes Somos</Link>
+            <Link to="/contacto" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Contacto</Link>
           </div>
         </div>
       )}
     </nav>
-  )
-  }
-  
-  export default Navbar
+  );
+}
+
+export default Navbar;

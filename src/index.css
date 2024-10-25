@@ -8,3 +8,16 @@ body{
   background-color: #e6f2e6;
   font-family: 'Cinzel', serif;
 }
+
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev  {
+  color: #437644 !important;
+}
+
+.swiper-container .swiper-pagination-bullet  {
+  background: #a8cda8 !important;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+  background: #437644 !important;
+}
