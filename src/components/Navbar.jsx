@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { Link } from 'react-router-dom';
-import logo from "../assets/mavelas-logo-removebg-preview.png";
+import { useState } from "react"
+import { Link } from 'react-router-dom'
+import logo from "../assets/mavelas-logo-removebg-preview.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   const closeMenu = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
 
   return (
     <nav className="bg-primary shadow-md fixed top-0 left-0 w-full z-50">
@@ -53,7 +53,7 @@ function Navbar() {
         </div>
       )}
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

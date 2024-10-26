@@ -9,7 +9,9 @@ export default {
       colors: {
         primary: '#f4f9f4', 
         secondary: '#a8cda8',
+        'secondary-dark': '#c4544a',
         background: '#437644',
+        button: '#144818'
         
     },
   },
