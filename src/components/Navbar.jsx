@@ -29,6 +29,7 @@ function Navbar() {
           <HashLink smooth to="/#home" className="text-gray-800 hover:text-secondary">Home</HashLink>
           <Link to="/tienda" className="text-gray-800 hover:text-secondary">Tienda</Link>
           <HashLink smooth to="/#quienes-somos" className="text-gray-800 hover:text-secondary">Quiénes Somos</HashLink>
+          <HashLink smooth to="/#productos" className="text-gray-800 hover:text-secondary">Productos</HashLink>
           <HashLink smooth to="/#contacto" className="text-gray-800 hover:text-secondary">Contacto</HashLink>
         </div>
 
@@ -49,6 +50,7 @@ function Navbar() {
             <HashLink smooth to="/#home" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Home</HashLink>
             <Link to="/tienda" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Tienda</Link>
             <HashLink smooth to="/#quienes-somos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Quiénes Somos</HashLink>
+            <HashLink smooth to="/#productos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Productos</HashLink>
             <HashLink smooth to="/contacto" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Contacto</HashLink>
           </div>
         </div>

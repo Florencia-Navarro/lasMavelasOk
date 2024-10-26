@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import QuienesSomos from './components/QuienesSomos'
 import Contacto from './components/Contacto'
+import Productos from './components/Productos'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Home />
       <QuienesSomos />
+      <Productos />
       <Contacto />
       </>)
       }
