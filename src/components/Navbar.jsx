@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import logo from "../assets/mavelas-logo-removebg-preview.png"
 
 function Navbar() {
@@ -18,17 +19,18 @@ function Navbar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
-          <Link to="/">
+          <HashLink smooth to="/#home">
             <img src={logo} alt="Logo" className="h-20 w-auto" />
-          </Link>
+          </HashLink>
         </div>
 
         {/* Links for desktop */}
         <div className="space-x-8 hidden md:flex">
-          <Link to="/" className="text-gray-800 hover:text-secondary">Home</Link>
+          <HashLink smooth to="/#home" className="text-gray-800 hover:text-secondary">Home</HashLink>
           <Link to="/tienda" className="text-gray-800 hover:text-secondary">Tienda</Link>
-          <Link to="/quienes-somos" className="text-gray-800 hover:text-secondary">Quiénes Somos</Link>
-          <Link to="/contacto" className="text-gray-800 hover:text-secondary">Contacto</Link>
+          <HashLink smooth to="/#quienes-somos" className="text-gray-800 hover:text-secondary">Quiénes Somos</HashLink>
+          <HashLink smooth to="/#productos" className="text-gray-800 hover:text-secondary">Productos</HashLink>
+          <HashLink smooth to="/#contacto" className="text-gray-800 hover:text-secondary">Contacto</HashLink>
         </div>
 
         {/* Mobile menu button */}
@@ -45,10 +47,11 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-4 pb-4 space-y-4">
-            <Link to="/" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Home</Link>
+            <HashLink smooth to="/#home" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Home</HashLink>
             <Link to="/tienda" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Tienda</Link>
-            <Link to="/quienes-somos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Quiénes Somos</Link>
-            <Link to="/contacto" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Contacto</Link>
+            <HashLink smooth to="/#quienes-somos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Quiénes Somos</HashLink>
+            <HashLink smooth to="/#productos" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Productos</HashLink>
+            <HashLink smooth to="/contacto" onClick={closeMenu} className="block text-gray-800 hover:text-secondary">Contacto</HashLink>
           </div>
         </div>
       )}

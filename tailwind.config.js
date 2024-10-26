@@ -11,7 +11,8 @@ export default {
         secondary: '#a8cda8',
         'secondary-dark': '#c4544a',
         background: '#437644',
-        button: '#144818'
+        button: '#144818', 
+        background2: '#f6ebea'
         
     },
   },
